@@ -1,0 +1,28 @@
+{
+  "name": "restapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "service.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node service.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eNamid/restAPI.git"
+  },
+  "author": "Dima Gavaza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eNamid/restAPI/issues"
+  },
+  "homepage": "https://github.com/eNamid/restAPI#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.2.3",
+    "sequelize": "^6.31.0"
+  }
+}
