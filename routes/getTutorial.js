@@ -2,9 +2,9 @@ const db = require('../src/db');
 
 module.exports = async (req, res) => {
     try {
-        const getTutorial = await db.Tutorial.findAll();
+        const tutorials = await db.Tutorials.findAll();
 
-        res.json(getTutorial);
+        res.json(tutorials);
     }
     catch(err){
         res.status(500);

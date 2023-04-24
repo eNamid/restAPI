@@ -8,16 +8,16 @@ module.exports = async (req, res) => {
     } = req.body;
 
     try{
-        const tutorial = await db.Tutorial.create({
+        await db.Tutorials.create({
             title: title, 
             description: description,
             published: published
         });
 
-        res.json(tutorial);
+        res.sendStatus(200);
 
     } catch (err){
-        res.status(500);
+        res.sendStatus(500);
         console.log(err);
     }
 }

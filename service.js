@@ -12,8 +12,6 @@ app.use([
     urlencoded({ extended: true })
 ]);
 
-app.set('trust proxy', true);
-
 app.use((req, res, next) => {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, PUT, POST');
@@ -21,17 +19,17 @@ app.use((req, res, next) => {
     next();
 });
 
-app.post('/postTutorial', require('./routes/postTutorial'));
+app.post('/tutorial', require('./routes/postTutorial'));
 
-app.get('/getTutorial', require('./routes/getTutorial'));
-app.get('/getTutorialId', require('./routes/getTutorialId'));
-app.get('/getPublished', require('./routes/getPublished'));
-app.get('/getTitle', require('./routes/getTitle'));
+app.get('/tutorial', require('./routes/getTutorial'));
+app.get('/tutorialId', require('./routes/getTutorialId'));
+app.get('/published', require('./routes/getPublished'));
+app.get('/title', require('./routes/getTitle'));
 
-app.put('/putTutorial/:id', require('./routes/putTutorial'));
+app.put('/tutorial/:id', require('./routes/putTutorial'));
 
-app.delete('/delTutirialId/:id', require('./routes/delTutorialId'));
-app.delete('/delTutorial', require('./routes/delTutorial'));
+app.delete('/tutirial/:id', require('./routes/delTutorialId'));
+app.delete('/title', require('./routes/delTutorial'));
 
 app.listen(process.env.PORT, () => {
     console.log(`Server is running on port ${process.env.PORT}.`);

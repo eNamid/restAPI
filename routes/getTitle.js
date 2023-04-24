@@ -4,13 +4,15 @@ module.exports = async (req, res) => {
     const title = req.query.title;
 
     try {
-        const getTitle = await db.Tutorial.findAll({
+        const Title = await db.Tutorials.findAll({
             where: {
-                title: title
+                title: {
+                    [db.Sequelize.Op.like]:`${title}%`
+                }
             }
         })
 
-        res.json(getTitle);
+        res.json(Title);
 
     } catch (err) {
         res.status(500);

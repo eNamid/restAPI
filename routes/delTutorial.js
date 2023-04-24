@@ -1,12 +1,10 @@
 const db = require('../src/db');
 
 module.exports = async (req, res) => {
-    const { 
-        title
-     } = req.body;
+    const title = req.query.title;
 
     try {
-         await db.Tutorial.destroy({
+         await db.Tutorials.destroy({
             where: {
                 title: title
             }

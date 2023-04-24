@@ -4,7 +4,7 @@ module.exports = async (req, res) => {
     const id = req.params.id;
 
     try {
-         await db.Tutorial.destroy({
+         await db.Tutorials.destroy({
             where: {
                 id: id
             }

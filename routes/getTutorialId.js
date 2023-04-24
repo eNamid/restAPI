@@ -1,15 +1,17 @@
 const db = require('../src/db');
 
 module.exports = async (req, res) => {
+    
     const id = req.query.id;
+
     try {
-        const getTutorialId = await db.Tutorial.findAll({
+        const tutorial = await db.Tutorials.findOne({
             where: {
                 id: id
             }
         });
 
-        res.json(getTutorialId);
+        res.json(tutorial);
     }
     catch(err){
         res.status(500);

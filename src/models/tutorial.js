@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    const Tutorial = sequelize.define('Tutorial', {
+    const Tutorials = sequelize.define('Tutorials', {
 		id: {
 			type: DataTypes.INTEGER,
 			autoIncrement: true,
@@ -14,5 +14,5 @@ module.exports = (sequelize, DataTypes) => {
         tableName: 'tutorials'
 	});
 
-	return Tutorial;
+	return Tutorials;
 }

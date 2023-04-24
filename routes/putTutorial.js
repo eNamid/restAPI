@@ -9,7 +9,7 @@ module.exports = async (req, res) => {
     } = req.body;
 
     try {
-         await db.Tutorial.update({
+        await db.Tutorials.update({
             title: title,
             description: description,
             published: published
